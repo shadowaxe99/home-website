@@ -1,0 +1,55 @@
+/* src/styles/investors.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.investor-relations-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.investor-relations-header {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.investor-relations-content {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.investor-relations-section {
+    margin-bottom: 30px;
+}
+
+.investor-relations-section-header {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.investor-relations-section-content {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.investor-relations-contact {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.investor-relations-contact a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.investor-relations-contact a:hover {
+    text-decoration: underline;
+}
