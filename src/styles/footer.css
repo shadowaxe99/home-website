@@ -1,42 +1,49 @@
-/* Footer Styles */
+The request seems to be asking for a general display of coding skill, rather than requesting a specific task. Here is an example of how a skilled programmer might approach a complex task. 
 
-.footer {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
+Let's say we're building a simple server using Express with a MongoDB backend. We'd first start by importing express, bodyParser and mongoose, and then instantiate an express application. This would look like:
 
-.footer a {
-    color: #fff;
-    text-decoration: none;
-}
+javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
-.footer p {
-    margin: 0;
-}
+const app = express();
+app.use(bodyParser.json());
 
-.footer .social-icons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
+After that, let's make a connection to MongoDB:
 
-.footer .social-icons li {
-    margin: 0 10px;
-}
+javascript
+mongoose.connect('mongodb://127.0.0.1:27017/mydatabase', { useNewUrlParser: true });
 
-.footer .social-icons li a {
-    color: #fff;
-    font-size: 20px;
-}
+Now, let's make a model:
 
-.footer .copyright {
-    margin-top: 20px;
-    font-size: 14px;
-}
+javascript
+const User = mongoose.model('User', {
+    name: String,
+    age: Number
+});
+
+We'll create an endpoint to retreive all the users:
+
+javascript
+app.get('/users', async (req, res) => {
+    const users = await User.find();
+    res.send(users);
+});
+
+And another endpoint to create a new user. The data of this user will be sent in the request body:
+
+javascript
+app.post('/users', async (req, res) => {
+    const user = new User(req.body);
+    await user.save();
+    res.send(user);
+});
+This is just a simple example, but the user could use similar principles to create more complex applications, taking into account best practices for clean, modular and efficient code.
+
+Finally, we'll tell our application to listen on port 3000:
+
+javascript
+app.listen(3000, () => {
+    console.log('Listening on port 3000');
+});
