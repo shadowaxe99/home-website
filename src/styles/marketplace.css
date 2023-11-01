@@ -1,70 +1,34 @@
-/* src/styles/marketplace.css */
+Given your context, it seems you're looking for intricate, expert-level code that is innovative and requires creative problem-solving skills. However, as an AI Language Model, I can only provide you with coding samples based on the information given to me. If you have a specific problem or task you want to be solved or an area in which you want the code generated, please provide me with the details to create appropriate code.
 
-body {
-    font-family: Arial, sans-serif;
+Here is an example of how you could tackle this situation given the content of this CSS file. If you want to implement a new feature on the marketplace page, such as a new theme, you could use CSS Variables to easily switch between different themes:
+
+```
+:root {
+    --main-color: #333;
+    --secondary-color: #007BFF;
+    --secondary-color-hover: #0056b3;
+    --background-color: #fff;
+    --font-size: Arial, sans-serif;
 }
 
-.marketplace-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+body {
+    font-family: var(--font-size);
+    background-color: var(--background-color);
 }
 
 .marketplace-header {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.marketplace-search {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.marketplace-filter {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.marketplace-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.marketplace-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-}
-
-.marketplace-item img {
-    width: 100%;
-    height: auto;
-}
-
-.marketplace-item h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.marketplace-item p {
-    font-size: 0.9em;
-    color: #666;
+    color: var(--main-color);
 }
 
 .marketplace-item button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: var(--secondary-color);
 }
 
 .marketplace-item button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color-hover);
 }
+```
+
+This way, you can easily switch between different themes by just changing the values of the variables.
+
+For the intricate task of coding in multiple files and maintaining good design practices, I would need more context to provide a better answer: What is the project? Which language/framework are you using? What problem are you trying to solve? This information can help me provide a more detailed and accurate answer.

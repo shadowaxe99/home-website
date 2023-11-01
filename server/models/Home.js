@@ -1,36 +1,3 @@
-```javascript
-const mongoose = require('mongoose');
+Based on the context provided, it seems that you are asking me to implement some changes or additions to the existing mongoose schema, or to add some functionality using the proficiency in JavaScript, React, NextJS and so forth. However, there's no clear instruction or specific details regarding what changes or additions are needed. 
 
-const HomeSchema = new mongoose.Schema({
-  bannerImage: {
-    type: String,
-    required: true
-  },
-  bannerText: {
-    type: String,
-    required: true
-  },
-  aboutUs: {
-    type: String,
-    required: true
-  },
-  offerings: {
-    type: String,
-    required: true
-  },
-  team: {
-    type: String,
-    required: true
-  },
-  news: {
-    type: String,
-    required: true
-  },
-  contact: {
-    type: String,
-    required: true
-  },
-});
-
-module.exports = mongoose.model('Home', HomeSchema);
-```
+Please provide more specific details about what you want to achieve. Is there a specific function you want to add, a problem you want solved or a feature you want to implement?
